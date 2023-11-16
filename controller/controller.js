@@ -1,7 +1,7 @@
 const User = require("../modal/userInfo")
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const AddToCart = require("../modal/addtoCart");
+//const AddToCart = require("../modal/addtoCart");
 
 const Signup = async (req,res)=>{
         try{      
@@ -49,14 +49,6 @@ const Login = async (req,res)=>{
             return res.status(500).json({message:"Internal Server Error"})
         }
 }
-
-
-
-
-
-
-
-
 
 
 const addToCart= async()=>{
