@@ -1,5 +1,6 @@
 
-const {display, top3} =require("../allData/allData")
+//const {display, top3} =require("../allData/allData")
+const { display } = require("../allData/allData")
 const {storeSchema}= require("../modal/model")
        
 
