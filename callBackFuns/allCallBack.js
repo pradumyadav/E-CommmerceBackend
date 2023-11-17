@@ -1,12 +1,12 @@
 
 //const {display, top3} =require("../allData/allData")
-const { display } = require("../allData/allData")
-const {storeSchema}= require("../modal/model")
+//const {ContinueImg } = require("../../E-clientSide/clientside/src/continue/ContinueImg")
+//const {ContinueImg } = require("../../E-clientSide/clientside/src/continue/ContinueImg")
+const { display, top3 } = require("../allData/allData")
+const {storeSchema, ContinueSchema}= require("../modal/model")
        
 
-                const Top3 =(req,res)=>{
-                        res.send(top3)
-                }
+                
 
             const interData=async(req,res)=>{
                 const first =await storeSchema.create(display)
@@ -17,6 +17,14 @@ const {storeSchema}= require("../modal/model")
                 res.send(second)
             }
 
+            const Continue =async(req,res)=>{
+                const third =await ContinueSchema.create(top3)
+                res.send (third)
+            }
+            const Continue2 =async(req,res)=>{
+                const third =await ContinueSchema.find({})
+                res.send (third)
+            }
 
-        module.exports={interData,takeData,Top3}
+        module.exports={interData,takeData,Continue,Continue2}
         

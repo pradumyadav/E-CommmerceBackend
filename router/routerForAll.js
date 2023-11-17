@@ -1,10 +1,12 @@
-const {interData, takeData, Top3 } = require("../callBackFuns/allCallBack")
+const {interData, takeData,Continue, Continue2 } = require("../callBackFuns/allCallBack")
 
 
         const routerForAll= require("express").Router()
-        routerForAll.get("/top3",Top3)
+       
        
         routerForAll.post("/myData",interData)
         routerForAll.get("/findData",takeData)
+        routerForAll.post("/imgpost",Continue)
+        routerForAll.get("/imgget",Continue2)
 
         module.exports=routerForAll ;

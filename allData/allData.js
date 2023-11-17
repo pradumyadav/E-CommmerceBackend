@@ -1321,7 +1321,8 @@ const furniture=[
 ]
 
 const top3 =[
-    {id:95, link:"https://www.jiomart.com/images/cms/aw_rbslider/slides/1698754160_Overall_Banner_web.jpg?im=Resize=(1680,320)"},
+    {id:95, 
+    link:"https://www.jiomart.com/images/cms/aw_rbslider/slides/1698754160_Overall_Banner_web.jpg?im=Resize=(1680,320)"},
     {id:96, link:"https://www.jiomart.com/images/cms/aw_rbslider/slides/1698861671_Unbeatable_Deals_on_Cycles_D.jpg?im=Resize=(1680,320)"},
     {id:97, link:"https://www.jiomart.com/images/cms/aw_rbslider/slides/1698782910_Nord_CE_2_Lite_5G_v2_1.jpg?im=Resize=(1680,320)"},
     {id:98, link:"https://www.jiomart.com/images/cms/aw_rbslider/slides/1698570156_Best_of_Mens_Fashion.jpg?im=Resize=(1680,320)"},

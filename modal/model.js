@@ -15,6 +15,14 @@
         })
 
 
+        const ContinueImg =mongo.Schema({
+            id:Number,
+            link:String
+        })
+
+
             const storeSchema=mongo.model("AllData",userSchema);
 
-            module.exports={storeSchema}
+            const ContinueSchema =mongo.model("ImgData",ContinueImg)
+            
+            module.exports={storeSchema,ContinueSchema}
