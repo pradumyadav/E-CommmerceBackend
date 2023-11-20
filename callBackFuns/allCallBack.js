@@ -26,5 +26,21 @@ const {storeSchema, ContinueSchema}= require("../modal/model")
                 res.send (third)
             }
 
-        module.exports={interData,takeData,Continue,Continue2}
+
+            const searchItems= async (req, res) => {
+                const { title } = req.query;
+                const queryObj = {};
+                if (title) {
+                  queryObj.title = { $regex: title, $options: "i" };
+                }
+               
+                try {
+                  const finds = await storeSchema.find(queryObj);
+                  res.send(finds);
+                } catch (error) {
+                  console.error("Error fetching data:", error);
+                  res.status(500).send("Internal Server Error");
+                }
+              };
+        module.exports={interData,takeData,Continue,Continue2,searchItems}
         
