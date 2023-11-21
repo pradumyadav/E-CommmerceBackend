@@ -1,7 +1,5 @@
 
-//const {display, top3} =require("../allData/allData")
-//const {ContinueImg } = require("../../E-clientSide/clientside/src/continue/ContinueImg")
-//const {ContinueImg } = require("../../E-clientSide/clientside/src/continue/ContinueImg")
+
 const { display, top3 } = require("../allData/allData")
 const {storeSchema, ContinueSchema}= require("../modal/model")
        
