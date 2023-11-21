@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const Signup = async (req,res)=>{
         try{      
-            const { email, password } = req.body;
+            const {email, password } = req.body;
 
             const existingUser = await User.findOne({email})
 
@@ -15,7 +15,7 @@ const Signup = async (req,res)=>{
 
             const hashedPassword = await bcrypt.hash(password,10)
 
-            const newUser  =  new User({email,password:hashedPassword})
+            const newUser  =  new User({name,email,password:hashedPassword})
             await newUser.save()
 
             const token = jwt.sign({userId:newUser._id},"secret",{expiresIn:"2d"})
@@ -32,6 +32,7 @@ const Login = async (req,res)=>{
 
             const {email,password} = req.body
             const user = await User.findOne({email})
+            
             if(!user){
                 return res.status(404).json({message:"User not found"})
             }
@@ -43,6 +44,8 @@ const Login = async (req,res)=>{
             }
 
             const token = jwt.sign({userId:user._id},"secret",{expiresIn:"2d"})
+          
+         
             return res.status(200).json({message:"User is successfully logged In",email,token})
         }catch(error){
             console.log(error);
