@@ -15,7 +15,7 @@ const Signup = async (req,res)=>{
 
             const hashedPassword = await bcrypt.hash(password,10)
 
-            const newUser  =  new User({name,email,password:hashedPassword})
+            const newUser  =  new User({email,password:hashedPassword})
             await newUser.save()
 
             const token = jwt.sign({userId:newUser._id},"secret",{expiresIn:"2d"})
