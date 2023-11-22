@@ -2,7 +2,7 @@
 
     const express = require("express")
     const app= express();
-    app.use(express.json())
+     app.use(express.json())
 
     const cors =require("cors");
     const stripe=require("stripe")("sk_test_51OF9HNSGSBjFGMDatfWIxrvEPfOtKJ8TOudE68qT3g5E8ziq4CS9yiGU4uEhz5VyAsaYTZr8H2a2TYUrHjJzZoZi00CnHzpcJA")

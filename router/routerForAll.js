@@ -1,4 +1,6 @@
 const {interData, takeData,Continue, Continue2, searchItems } = require("../callBackFuns/allCallBack")
+//const {Cart, findCart}= require("../controller/cartController")
+
 
 
         const routerForAll= require("express").Router()
@@ -9,5 +11,7 @@ const {interData, takeData,Continue, Continue2, searchItems } = require("../call
         routerForAll.post("/imgpost",Continue)
         routerForAll.get("/imgget",Continue2)
         routerForAll.get("/search",searchItems)
+        // routerForAll.post("/addcart",Cart)
+        // routerForAll.get("/findcart",findCart)
 
         module.exports=routerForAll ;

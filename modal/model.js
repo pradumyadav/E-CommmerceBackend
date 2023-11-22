@@ -10,7 +10,8 @@
             title:"string",
             img:"string",
             description:"string",
-            price:"number"
+            price:"number",
+            quantity:"number"
 
         })
 
@@ -20,9 +21,22 @@
             link:String
         })
 
+        // const addToCartSchema =mongo.Schema({
+
+        //     id:"number",
+        //     cat:"string",
+        //     type:"string",
+        //     title:"string",
+        //     img:"string",
+        //     description:"string",
+        //     price:"number",
+        //     quantity:"number"
+        // })
 
             const storeSchema=mongo.model("AllData",userSchema);
 
             const ContinueSchema =mongo.model("ImgData",ContinueImg)
+
+            // const =mongo.model("cartData",addToCartSchema)
             
             module.exports={storeSchema,ContinueSchema}
