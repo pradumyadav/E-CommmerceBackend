@@ -55,27 +55,6 @@ const Login = async (req,res)=>{
 }
 
 
-// const addToCart= async()=>{
-//     try {
-//         const userId =req.user.id
-//         // Extract data from the request body
-//         const {productId, quantity } = req.body;
-    
-//         // Create a new AddToCart document
-//         const cartItem = new AddToCart({
-//           user: userId,
-//           product: productId,
-//           quantity: quantity || 1,
-//         });
-    
-//         // Save the cart item to the database
-//         await cartItem.save();
-    
-//         res.status(201).json({ success: true, message: "Item added to the cart successfully." });
-//       } catch (error) {
-//         console.error(error);
-//         res.status(500).json({ success: false, message: "Internal Server Error" });
-//       }
-// }
+
 
 module.exports = {Signup,Login}
