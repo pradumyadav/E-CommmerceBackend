@@ -42,7 +42,7 @@ const userRoutes= require("./router/userRoutes")
             payment_method_types:["card"],
              line_items:lineItems,
             mode:"payment",
-            success_url:"http://localhost:3000/sucess",
+            success_url:"https://inspiring-mermaid-df4028.netlify.app",
             cancel_url:"http://localhost:3000/cancel",
 
         })
