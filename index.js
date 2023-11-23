@@ -43,7 +43,7 @@ const userRoutes= require("./router/userRoutes")
              line_items:lineItems,
             mode:"payment",
             success_url:"https://inspiring-mermaid-df4028.netlify.app",
-            cancel_url:"https://inspiring-mermaid-df4028.netlify.app/cart",
+            cancel_url:"https://inspiring-mermaid-df4028.netlify.app/app/cart",
 
         })
         res.json({id:session.id})
